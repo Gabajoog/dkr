@@ -1,0 +1,16 @@
+{% block content %}
+    <h1>welcome to your blog</h1>
+    {% if user.is_authenticated %}
+        <h1> Welcome {{user}} </h1>
+        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'new_post' %}">New Post</a>
+    {% else %}
+    <a href="{% url 'sign-up' %}" >Sign up</a>
+    <a href="{% url 'login' %}" >Login</a>
+    {% endif %}
+{% endblock %}
+
+{% include 'blog/blog.html' %}
+
+
+

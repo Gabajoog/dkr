@@ -1,0 +1,8 @@
+<form action="{% url 'update_post' id %}" method="post">
+    {% csrf_token %}
+    <label for="title">Enter ID:</label>
+    <input id="title" name="title" type="text" value="{{ title }}">
+    <label for="body">Enter Dormitory №:</label>
+    <input id="body" name="body" type="text" value="{{ body }}">
+    <input class="button" type="submit" value="Publish">
+</form>
